@@ -1,0 +1,5 @@
+This is an application written in NodeJs and has below components:
+
+- A front end app which is written in React and uses create-react-app starter. This will be hosted in an Azure Static Web App and is stored in the `frontend` directory.
+- A backend API which is going to be hosted in an Azure Function as the backend for the static web app in the `api` directory.
+- The API uses a Cosmos DB database as its datastore.

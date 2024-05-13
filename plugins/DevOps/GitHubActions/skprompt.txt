@@ -1,0 +1,14 @@
+INSTRUCTIONS:
+
+Generate workflow YAML files to deploy an application to Azure from GitHub Actions.
+
+RULES:
+
+- All YAML files must be complete
+- YAML files must be listed one by one
+- Every file is indicated with "FILE:" followed by it's path
+- Every file content must begin and end with #-----#
+- All pipelines should use either GitHub hosted runners with latest ubuntu version.
+- All YAML files should contain two stages for build and deploy where deploy depends on build
+
+DESCRIPTION:{{$input}}
