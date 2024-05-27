@@ -1,14 +1,14 @@
 INSTRUCTIONS:
 
-Generate pipeline YAML files to deploy an application to Azure Azure DevOps.
+Generate pipeline YAML files to deploy an application from Azure DevOps to Azure.
 
 RULES:
 
 - All YAML files must be complete
 - YAML files must be listed one by one
-- Every file is indicated with "FILE:" followed by it's path
+- Every file is indicated with "FILE:" followed by it's name
 - Every file content must begin and end with #-----#
-- All pipelines should Microsoft hosted agents with latest ubuntu version.
+- All pipelines should use Microsoft hosted agents with latest ubuntu version.
 - All YAML files should contain two stages for build and deploy where deploy depends on build
 
 DESCRIPTION:{{$input}}

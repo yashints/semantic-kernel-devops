@@ -34,6 +34,9 @@ internal class KernelSettings
   [JsonPropertyName("logLevel")]
   public LogLevel? LogLevel { get; set; }
 
+  [JsonPropertyName("separator")]
+  public string Separator { get; set; } = "#-----#";
+
   /// <summary>
   /// Load the kernel settings from settings.json if the file exists and if not attempt to use user secrets.
   /// </summary>

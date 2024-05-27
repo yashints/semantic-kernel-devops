@@ -1,0 +1,9 @@
+{{!-- Step 1: Call the chosen function with input and assign the result to a new variable "result" --}}
+{{set 'result' (DevOps-GitHubActions input=@root.input)}}
+
+{{!-- Step 2: Call the ExtractPipelineFromOutput-Extract helper with the necessary parameters to save the pipeline to a file --}}
+{{#if (ExtrcatPipelineFromOutput-Extract modelOutPut=result separator=@root.separator path=@root.path)}}
+    {{json "The pipeline has been successfully saved!"}}
+{{else}}
+    {{json "The pipeline could not be saved."}}
+{{/if}}

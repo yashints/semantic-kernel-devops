@@ -6,9 +6,9 @@ RULES:
 
 - All YAML files must be complete
 - YAML files must be listed one by one
-- Every file is indicated with "FILE:" followed by it's path
+- Every file is indicated with "FILE:" followed by it's name
 - Every file content must begin and end with #-----#
-- All pipelines should use either GitHub hosted runners with latest ubuntu version.
+- All pipelines should use GitHub hosted runners with latest ubuntu version.
 - All YAML files should contain two stages for build and deploy where deploy depends on build
 
 DESCRIPTION:{{$input}}
