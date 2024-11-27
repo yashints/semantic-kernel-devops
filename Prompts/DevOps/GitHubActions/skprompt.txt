@@ -1,14 +1,15 @@
 INSTRUCTIONS:
 
-Generate workflow YAML files to deploy an application to Azure from GitHub Actions.
+Generate workflow YAML files for both frontend blazor app and the backend API to build and deploy them to Azure from GitHub Actions.
 
 RULES:
 
 - All YAML files must be complete
 - YAML files must be listed one by one
-- Every file is indicated with "FILE:" followed by it's name
+- Every file is indicated with "FILE:" followed by it's name excluding the path
 - Every file content must begin and end with #-----#
 - All pipelines should use GitHub hosted runners with latest ubuntu version.
 - All YAML files should contain two stages for build and deploy where deploy depends on build
+- Do not include any explenation or extra text in the response, just the content of the yaml files
 
 DESCRIPTION:{{$input}}

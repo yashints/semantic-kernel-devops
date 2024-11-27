@@ -10,5 +10,6 @@ RULES:
 - Every file content must begin and end with #-----#
 - All pipelines should use Microsoft hosted agents with latest ubuntu version.
 - All YAML files should contain two stages for build and deploy where deploy depends on build
+- Do not include any explenation or extra text in the response, just the content of the yaml files
 
 DESCRIPTION:{{$input}}

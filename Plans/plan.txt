@@ -1,9 +1,11 @@
-{{!-- Step 1: Call the chosen function with input and assign the result to a new variable "result" --}}
-{{set 'result' (DevOps-GitHubActions input=@root.input)}}
+{{!-- Step 1: Create a variable to hold the input string --}}
+{{set "inputString" @root.input}}
 
-{{!-- Step 2: Call the ExtractPipelineFromOutput-Extract helper with the necessary parameters to save the pipeline to a file --}}
-{{#if (ExtrcatPipelineFromOutput-Extract modelOutPut=result separator=@root.separator path=@root.path)}}
-    {{json "The pipeline has been successfully saved!"}}
-{{else}}
-    {{json "The pipeline could not be saved."}}
-{{/if}}
+{{!-- Step 2: Generate the YAML content using the appropriate custom helper based on the provided function --}}
+{{set "yamlContent" (DevOps-GitHubActions input=inputString)}}
+
+{{!-- Step 3: Save the generated YAML content to a file using the provided directory and separator --}}
+{{set "saveResult" (ExtrcatPipelineFromOutput-Extract modelOutPut=yamlContent separator=@root.separator path=@root.path)}}
+
+{{!-- Step 4: Output the result of the save operation --}}
+{{json saveResult}}

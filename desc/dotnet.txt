@@ -3,4 +3,4 @@ This is an application written in DotNet and has below components:
 - A front end app written with Blazor which is going to be hosted in a Linux App Services and is stored in the `frontend` directory.
 - A backend API which is going to be hosted in an Azure Function and is in the `api` directory.
 - API uses Azure SQL databases as its datastore.
-- Both the frontend and backend API use DotNet 8 version.
+- Both the frontend and backend API use DotNet 9 version.
